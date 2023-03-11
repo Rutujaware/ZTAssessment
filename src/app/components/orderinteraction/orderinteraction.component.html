@@ -1,10 +1,20 @@
 <!-- 1st Screen -->
-<div class="container" *ngIf="Condition1" ng-app="">
+<!-- <div class="container" *ngIf="Condition1" ng-app="">
    <div class="card" style="width: 45rem;"></div>
    <div class="card-header">
+<<<<<<< Updated upstream
       <p class="header-title">Associate Interaction
          <span>QUESTION | RESPONSE | <a type="button" (click)="dismissbox()"><img src="./assets/delete.png"></a></span>
       </p>
+=======
+      <div class="header-title">ORDER-INTERACTION
+         <div style="display: inline-flex;position: absolute;right: 30px;">
+         <div style="display: inline-flex;" class="que"><a style="cursor: pointer;">QUESTION</a></div>
+         <div style="display: inline-flex;" class="res"><a style="cursor: pointer;">RESPONSE</a></div>
+         <a type="button" (click)="dismissbox()"><img src="./assets/delete.png" class="delimg" alt=""></a>
+         </div>
+      </div>
+>>>>>>> Stashed changes
    </div>
    <div class="card-body">
       <div class="border-box">
@@ -22,82 +32,116 @@
          <div class="line"></div>
          <div class="box2"></div>
       </div>
+<<<<<<< Updated upstream
       <a (click)="screen2()" class="save-btn">
-         <img src="assets/Icons/savebtn.png">
+         <img src="assets/Icons/savebtn.png" alt="">
+=======
+
+      <div class="left">
+         <ul style="list-style-type:none;">
+            <li class="list-item" *ngFor="let choice of choices;index as i">
+               <img src="./assets/Icons/ellipse.png" alt="">
+               <input type="text" name="inputprompt" class="inpu" placeholder="Choice{{i+1}}" [(ngModel)]="choice.text" onfocus="this.placeholder = ''">
+               <img src="./assets/deletegreen.png" class="deleteicon" (click)="deleteicon(i)" alt="">
+            </li>
+         </ul>
+         <a type="button" class="choice" *ngIf="choicebox" (click)="addChoice()"><img src="./assets/Icons/add.png" height="12px" alt=""> Add Choice</a>
+      </div>
+      <div class="right">
+
+      </div>
+      <a (click)="screen2()">
+         <img src="./assets/Icons/savebtn.png" class="autosave1" *ngIf="autosave" (click)="displayText() "alt="">
+>>>>>>> Stashed changes
       </a>
    </div>
 </div>
 
 
-
+ -->
 <!-- Symbols -->
-<div class="cardBottomBox" *ngIf="bottomSymbol">
+<!-- <div class="cardBottomBox" *ngIf="bottomSymbol">
    <div class="card-bottom" style="width: 45rem;">
       <div class="card-body">
          <div class="text-icons">
             <p class="texts">
                <span>
-                  <a type="button"><img src="assets/Icons/cross.png" height="12px" id="cross" (click)="dismiss()"></a>
+<<<<<<< Updated upstream
+                  <a type="button"><img src="assets/Icons/cross.png" height="12px" id="cross" (click)="dismiss()" ></a>
+=======
+                  <a type="button"><img src="./assets/Icons/cross.png" height="12px" id="cross" (click)="dismiss()" alt=""></a>
+>>>>>>> Stashed changes
                </span><br>
                EDIT TEXT
             </p>
 
             <div class="symbol">
-               <a type="button" (click)="boldText()"><img src="./assets/Icons/bita.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button" (click)="italicText()"><img src="./assets/Icons/italic.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button" (click)="underlineText()"><img src="./assets/Icons/underline.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/icon5.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/icon4.png" height="20px"></a>
-               <img src="./assets/Icons/Line 7.png" height="30px">
-               <a type="button"><img src="./assets/Icons/icon6.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/gallery.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/music.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/icon3.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/icon2.png" height="20px"></a>
-               <img src="./assets/Icons/Line 7.png" height="30px">
-               <a type="button"><img src="./assets/Icons/icon1.png" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/normal.png" height="20px"></a>
-               <img src="./assets/Icons/Line 7.png" height="30px">
-               <a type="button"><img src="./assets/Icons/dash1.png" (click)="Dash1()" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/dash2.png" (click)="Dash2()" height="20px"></a>
-               <img src="./assets/Icons/Line 12.png" height="20px">
-               <a type="button"><img src="./assets/Icons/icon7.png" height="30px"></a>
-               <a type="button"><img src="./assets/Icons/arrow.png" height="20px"></a>
+               <a type="button" (click)="boldText()"><img src="./assets/Icons/bita.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button" (click)="italicText()"><img src="./assets/Icons/italic.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button" (click)="underlineText()"><img src="./assets/Icons/underline.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button"><img src="./assets/Icons/icon5.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px"alt="">
+               <a type="button"><img src="./assets/Icons/icon4.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 7.png" height="30px"alt="">
+               <a type="button"><img src="./assets/Icons/icon6.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px"alt="">
+               <a type="button"><img src="./assets/Icons/gallery.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px"alt="">
+               <a type="button"><img src="./assets/Icons/music.png" height="20px"alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px"alt="">
+               <a type="button"><img src="./assets/Icons/icon3.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button"><img src="./assets/Icons/icon2.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 7.png" height="30px" alt="">
+               <a type="button"><img src="./assets/Icons/icon1.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button"><img src="./assets/Icons/normal.png" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 7.png" height="30px"alt="">
+               <a type="button"><img src="./assets/Icons/dash1.png" (click)="Dash1()" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button"><img src="./assets/Icons/dash2.png" (click)="Dash2()" height="20px" alt=""></a>
+               <img src="./assets/Icons/Line 12.png" height="20px" alt="">
+               <a type="button"><img src="./assets/Icons/icon7.png" height="30px" alt=""></a>
+               <a type="button"><img src="./assets/Icons/arrow.png" height="20px" alt=""></a>
             </div>
          </div>
       </div>
    </div>
-</div>
+</div> -->
 
 
 <!-- 2nd Screen -->
-<div class="content2" *ngIf="Condition2" ng-app="">
+<!-- <div class="content2" *ngIf="Condition2" ng-app="">
    <div class="card-header-1">
+<<<<<<< Updated upstream
       <p class="header-title">Associate Intercation
          <span>QUESTION | RESPONSE | <a type="button" (click)="invisiblebox()"><img
                   src="./assets/delete.png"></a></span>
       </p>
+=======
+      <div class="header-title">ORDER-INTERACTION
+         <div style="display: inline-flex;position: absolute;right: 30px;">
+         <div style="display: inline-flex;" class="que"><a style="cursor: pointer;">QUESTION</a></div>
+         <div style="display: inline-flex;" class="res"><a style="cursor: pointer;">RESPONSE</a></div>
+         <a type="button" (click)="dismissbox()"><img src="./assets/delete.png" class="delimg" alt=""></a>
+         </div>
+      </div>
+>>>>>>> Stashed changes
    </div>
    <div class="card-body">
       <div class="row mt-1">
          <p class="prompt-1" ng-bind="inputprompt">
-            <img src="./assets/Icons/symbol.png" class="isymbol">
+<<<<<<< Updated upstream
+            <img src="./assets/Icons/symbol.png" class="isymbol" alt="">
             Please define the correct association pair below
          </p>
       </div>
       <div class="row mt-2">
          <p class="prompt-2" ng-bind="inputprompt">
-            <img src="./assets/Icons/symbol.png" class="isymbol">
+            <img src="./assets/Icons/symbol.png" class="isymbol" alt="">
             You may make as many assocition pairs as you want
          </p>
       </div>
@@ -117,24 +161,57 @@
          <div class="box2"></div>
       </div>
 
+=======
+            <img src="./assets/Icons/symbol.png" class="isymbol" alt="">
+            Please define the correct order in the box to the right
+         </p>
+      </div>
+      <div class="left-1">
+         <ul style="list-style-type: none;">
+            <li *ngFor="let i of choices">
+               <img src="./assets/Icons/shadedrectangle.png" class="shadedrectangle" *ngIf="imgshow && i.text" alt="">
+               {{i.text}}
+            </li>
+            
+         </ul>
+      </div>
+      <img src="./assets/Icons/arrowleft.png" class="arrowleft" alt="">
+>>>>>>> Stashed changes
       <div class="right-1">
 
       </div>
       <a (click)="screen3()">
-         <img src="assets/Icons/savebtn.png" class="autosave">
+<<<<<<< Updated upstream
+         <img src="assets/Icons/savebtn.png" class="autosave" alt="">
+=======
+         <img src="./assets/Icons/savebtn.png" class="autosave" alt="">
+>>>>>>> Stashed changes
       </a>
    </div>
 </div>
 
-
+ -->
 
 
 <!-- 3rd Screen -->
-<div class="content2" *ngIf="Condition3" cdkDropListGroup>
+<!-- <div class="content2" *ngIf="Condition3" cdkDropListGroup>
    <div class="card-header-1">
       <p class="header-title">ITEM 1
    </div>
    <div class="card-body">
+<<<<<<< Updated upstream
+=======
+      <div class="left-1">
+         <ul style="list-style-type: none;">
+            <li *ngFor="let i of choices" cdkDrag class="dragging" (cdkDragStarted)="onDragStarted()" (cdkDragEnded)="onDragEnded()">
+               <img src="./assets/Icons/shadedrectangle.png" class="shadedrectangle" *ngIf="imgshow && i.text" alt="">
+               {{i.text}}
+            </li>
+         </ul>
+      </div>
+      <img src="./assets/Icons/arrowleft.png" class="arrowleft" alt="">
+      <div class="right-1"  cdkDropList (cdkDropListDropped)="onDrop($event)">
+>>>>>>> Stashed changes
 
       <div class="border-box3">
          <div class="choice-box">
@@ -152,4 +229,10 @@
          <div class="box2"></div>
       </div>
    </div>
+<<<<<<< Updated upstream
 </div>
+=======
+</div>
+
+<img  id="saveButton1" src="assets/SaveButton.png" alt="" *ngIf="savebtn1">
+>>>>>>> Stashed changes -->

@@ -1,0 +1,81 @@
+<div class="box" *ngIf="screenLoad">
+    <p class="successMsg"><span class="testpre">Test Preview: Test 2</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a type="button"
+            (click)="showbackgroun()"><img src="./assets/close.jpeg" height="35px"></a>
+    </p>
+    <div class="box2">
+        <img src="./assets/Ellipse 26 (1).png" height="40px">
+    </div>
+    <div class="vect"><p class="successMsg2"><img src="./assets/Vector.png" height="12px"></div>
+</div>
+
+
+<ng-container *ngIf="backgroundClose">
+    <header>
+        <P class="test7">Test 7</P>
+
+        <div class="progress mt-3">
+            <div class="progress-bar  bg-white" role="progressbar" style="width: 100%" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div> 0%
+        <div class="searchProfilePower">
+            <a type="button"><img id="search" src="assets/wifi.jfif" alt="#" height="25px"></a>
+
+        </div>
+
+
+    </header>
+    <div class="row main">
+        <div class="col-md-6 text">
+            <h5>Choice Interaction</h5>
+            <p class="choice-text">
+                <b> Luxembourg's Neigbors</b>
+            </p>
+            <p class="para">
+                OAT , the company behind TOA assessment platform, is located in<br>
+                <b>Luxembourg or Letzebourg </b> as it is called Luxembourgish language, <br>a
+                small country Western Europe.
+            </p>
+            <p class="para2">Which of the following countries share no border with Luxembourg?</p>
+            <div class="card" style="width: 34rem;">
+                <div class="card-body">
+                    <div class="checkbox">
+                        <label class="mt-1">
+                            <input type="checkbox"  data-toggle="toggle"> &nbsp;&nbsp; Belgium
+                        </label><br>
+                        <label class="mt-1">
+                            <input type="checkbox"  data-toggle="toggle">&nbsp;&nbsp;&nbsp;Germany
+                        </label><br>
+                        <label class="mt-1">
+                            <input type="checkbox"  data-toggle="toggle">&nbsp;&nbsp;&nbsp;Austria
+                        </label><br>
+                        <label class="mt-1">
+                            <input type="checkbox"  data-toggle="toggle">&nbsp;&nbsp;&nbsp;Denmark
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 img">
+            <a type="button"><img src="assets/image.jfif" alt="#" height="250px" width="400px" /></a>
+            <p class="img-txt">The river alzzette Luxombourg Plaffenthal by Dieter Raber, <br> elleased under CC BY-5A
+                4.0
+            </p>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="next">
+            <a type="button"><img src="assets/Next.png" alt="#" height="20px" /></a>
+        </div>
+        <div>
+            <div class="searchProfilePower">
+
+            </div>
+        </div>
+
+    </footer>
+</ng-container>

@@ -10,8 +10,8 @@ export class SideBarComponent implements OnInit {
   opened: boolean = false;
   opened_tests: boolean = false;
   expanded:boolean=true
-  expanded_tests: boolean = true;
-  expandedSideBar: any;
+  expanded_tests: boolean = true;   
+  expandedSideBar:any;
   expandedSideBar_tests: any;
   commonIntrxn: boolean = false;
   inlineIntrxn: boolean = false;
